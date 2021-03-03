@@ -46,10 +46,12 @@ export default {
     });
 
     const goToDetail = () => {
-      console.log("漏油跳转");
+      printlog();
       router.push({ name: "about" });
     };
-
+    const printlog = () => {
+      console.log("测试函数调用函数以及取data值", state.swiperList);
+    };
     return {
       ...toRefs(state),
       goToDetail,
