@@ -3,12 +3,15 @@
   position: relative;
   top: 200px;
 }
+.back {
+  position: relative;
+  top: 260px;
+}
 </style>
 <template>
   <div class="about">
-    {{ a }}
-    <h1>This is an about page</h1>
-    <button @click="goHome">返回</button>
+    <h1>This is an about page 我是响应式reactive数据{{ a }}</h1>
+    <button class="back" @click="goHome">返回</button>
     <button class="btn-text" @click="countAdd">{{ btnText }}</button>
     <div>我是普通{{ count }}</div>
     <div>我是计算属性{{ bigCount }}</div>

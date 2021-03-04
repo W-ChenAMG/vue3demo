@@ -5,9 +5,10 @@
 <template>
   <div class="home">
     <helloWorld></helloWorld>
-    {{ name }}
+    <p>我是响应式数据{{ name }}</p>
+
     <div v-for="item in swiperList" :key="item.id">
-      <p>{{ item }}</p>
+      <p>数组遍历的数据{{ item }}</p>
     </div>
     <button @click="goToDetail">路由跳转</button>
   </div>
@@ -42,7 +43,7 @@ export default {
       name: "wei",
     });
     onMounted(() => {
-      console.error(state);
+      console.log("onMounted挂载的reactive数据", state);
     });
 
     const goToDetail = () => {
